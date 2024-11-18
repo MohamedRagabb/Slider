@@ -1,0 +1,9 @@
+.item-caption{
+    left: 10%;
+    bottom: 30px;
+    width: 80%;
+}
+
+.item{
+    cursor: pointer;
+}
