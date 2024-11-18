@@ -7,3 +7,14 @@
 .item{
     cursor: pointer;
 }
+
+
+.lightBoxContainer{
+    background-color: rgb(0, 0, 0,.7);
+}
+.lightitem{
+    background-image: url(./images/3.jpeg);
+    width:50%;
+    height: 70vh;
+    background-size: cover;
+}
