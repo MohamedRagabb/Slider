@@ -31,7 +31,7 @@ function nextSlide(){
 
 function prvSilde(){
     if(currentIndex==-1){
-        currentIndex=5;
+        currentIndex= imgList.length-1;
     }
     currentIndex--;
     var imgsrc = imgList[currentIndex].getAttribute('src')
