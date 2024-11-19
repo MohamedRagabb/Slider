@@ -1,6 +1,7 @@
 var imgList = Array.from(document.querySelectorAll('.item img'));
-var lightBoxContainer = document.querySelector('.lightBoxContainer')
-var lightitem = document.querySelector('.lightitem')
+var lightBoxContainer = document.querySelector('.lightBoxContainer');
+var lightitem = document.querySelector('.lightitem');
+var closeBtn = document.querySelector('#close');
 
 var nextBtn = document.querySelector('#next');
 var prvBtn = document.querySelector('#prv');
@@ -38,6 +39,29 @@ function prvSilde(){
     lightitem.style.backgroundImage = `url(${imgsrc})`
 
 }
+function CloseSlide(){
+    lightBoxContainer.classList.replace('d-flex' , 'd-none')
+}
 
-prvBtn.addEventListener('click' , prvSilde)
-nextBtn.addEventListener('click' , nextSlide)
+lightBoxContainer.addEventListener('click' ,function(){
+    CloseSlide()
+})
+closeBtn.addEventListener('click' ,function(){
+    CloseSlide()
+})
+lightitem.addEventListener('click' , function(e){
+    e.stopPropagation()
+})
+document.addEventListener('keydown' , function(e){
+    if(e.key== 'ArrowRight'){
+        nextSlide()
+    }else if(e.key== 'ArrowLeft'){
+        prvSilde()
+    }else if(e.key =='Escape'){
+        cl
+    }
+})
+
+prvBtn.addEventListener('click' , prvSilde);
+nextBtn.addEventListener('click' , nextSlide);
+closeBtn.addEventListener('click' , CloseBtn );
