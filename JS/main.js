@@ -30,9 +30,12 @@ function nextSlide(){
 }
 
 function prvSilde(){
-    console.log (
-        "hello "
-    )
+    if(currentIndex==-1){
+        currentIndex=5;
+    }
+    currentIndex--;
+    var imgsrc = imgList[currentIndex].getAttribute('src')
+    lightitem.style.backgroundImage = `url(${imgsrc})`
 
 }
 
